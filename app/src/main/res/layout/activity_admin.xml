@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <TextView
+            style="@style/AdminTitle"
+            android:text="Pub Bornes — Administration" />
+
+        <TextView
+            android:id="@+id/versionText"
+            style="@style/AdminSmall" />
+
+        <!-- 1. Factory POS -->
+        <Button
+            android:id="@+id/btnLaunchPos"
+            style="@style/AdminButton"
+            android:text="Lancer Factory POS" />
+
+        <!-- 2. Synchronisation -->
+        <TextView
+            style="@style/AdminSection"
+            android:text="Synchronisation" />
+
+        <TextView
+            android:id="@+id/statusText"
+            style="@style/AdminBody" />
+
+        <Button
+            android:id="@+id/btnSyncNow"
+            style="@style/AdminButton"
+            android:text="Synchroniser maintenant" />
+
+        <!-- 3. Réglages -->
+        <TextView
+            style="@style/AdminSection"
+            android:text="Réglages" />
+
+        <TextView style="@style/AdminLabel" android:text="ID du dossier Google Drive (ou lien du dossier)" />
+        <EditText
+            android:id="@+id/editFolderId"
+            style="@style/AdminEdit"
+            android:inputType="textNoSuggestions|textUri" />
+
+        <TextView style="@style/AdminLabel" android:text="Clé API Google" />
+        <EditText
+            android:id="@+id/editApiKey"
+            style="@style/AdminEdit"
+            android:inputType="textNoSuggestions|textVisiblePassword" />
+
+        <TextView style="@style/AdminLabel" android:text="Code PIN (4 à 8 chiffres)" />
+        <EditText
+            android:id="@+id/editPin"
+            style="@style/AdminEdit"
+            android:inputType="numberPassword"
+            android:maxLength="8" />
+
+        <TextView style="@style/AdminLabel" android:text="Durée d'affichage des images (secondes)" />
+        <EditText
+            android:id="@+id/editImageDuration"
+            style="@style/AdminEdit"
+            android:inputType="number"
+            android:maxLength="4" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchSound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Son des vidéos"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <TextView style="@style/AdminLabel" android:text="Mise à l'échelle" />
+        <RadioGroup
+            android:id="@+id/radioScale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioFill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remplir (plein écran, recadré au centre)"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/radioFit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adapter (média entier, bandes de couleur)"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </RadioGroup>
+
+        <TextView style="@style/AdminLabel" android:text="Couleur de fond des bandes (ex : #000000)" />
+        <EditText
+            android:id="@+id/editBgColor"
+            style="@style/AdminEdit"
+            android:inputType="textNoSuggestions"
+            android:maxLength="9" />
+
+        <TextView style="@style/AdminLabel" android:text="Package de Factory POS" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editPosPackage"
+                style="@style/AdminEdit"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="textNoSuggestions" />
+
+            <Button
+                android:id="@+id/btnPickPos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Choisir…" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSave"
+            style="@style/AdminButton"
+            android:text="Enregistrer les réglages" />
+
+        <!-- 4, 5, 6 -->
+        <TextView
+            style="@style/AdminSection"
+            android:text="Système" />
+
+        <Button
+            android:id="@+id/btnAndroidSettings"
+            style="@style/AdminButton"
+            android:text="Ouvrir les paramètres Android" />
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/AdminButton"
+            android:text="Retour à la lecture" />
+
+        <Button
+            android:id="@+id/btnQuit"
+            style="@style/AdminButton"
+            android:text="Quitter l'application" />
+
+        <TextView
+            style="@style/AdminSmall"
+            android:layout_marginTop="16dp"
+            android:text="Ce menu se ferme automatiquement après 60 s d'inactivité." />
+    </LinearLayout>
+</ScrollView>

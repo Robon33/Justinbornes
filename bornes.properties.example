@@ -1,0 +1,5 @@
+# Copier ce fichier en "bornes.properties" pour pré-remplir les réglages dans l'APK
+# (évite de taper la clé API sur chaque borne). Modifiables ensuite dans le menu admin.
+driveFolderId=
+apiKey=
+posPackage=

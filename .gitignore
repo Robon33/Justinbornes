@@ -1,0 +1,12 @@
+.gradle/
+build/
+local.properties
+.idea/
+*.iml
+.DS_Store
+# Secrets : ne jamais publier
+keystore/
+keystore.properties
+bornes.properties
+dist/
+.kotlin/

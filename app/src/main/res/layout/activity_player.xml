@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Superposition de 3 couches :
+     1. PlayerView (vidéos) en fond,
+     2. ImageView (images) par-dessus, opaque : masque la vidéo pendant les images
+        et pendant la préparation de la vidéo suivante (=> aucune coupure noire),
+     3. écran d'attente quand le cache est vide. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/playerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:keep_content_on_player_reset="true"
+        app:resize_mode="zoom"
+        app:shutter_background_color="@android:color/transparent"
+        app:surface_type="surface_view"
+        app:use_controller="false" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/waitingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:gravity="center"
+        android:text="Chargement du contenu…"
+        android:textColor="@android:color/white"
+        android:textSize="32sp"
+        android:visibility="visible" />
+</FrameLayout>
