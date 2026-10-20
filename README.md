@@ -68,7 +68,7 @@ sur « Numéro de build ») puis *Débogage USB*, brancher la borne :
 ./install.sh              # installe sur toutes les bornes détectées par `adb devices`
 ```
 **Par lien de téléchargement (GitHub)** — sur la borne, ouvrir dans le navigateur :
-`https://github.com/<compte>/<depot>/releases/latest/download/PubBornes.apk`
+`https://github.com/Robon33/Justinbornes/releases/latest/download/PubBornes.apk`
 (ce lien pointe toujours vers la dernière version publiée), autoriser **Sources inconnues**
 pour ce navigateur quand Android le demande, puis **Installer**.
 

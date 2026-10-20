@@ -1,7 +1,7 @@
 #!/bin/sh
 # Construit l'APK signé et le publie en Release GitHub (vX.Y = versionName).
 # Lien permanent vers la dernière version, à ouvrir sur les bornes :
-#   https://github.com/<compte>/<depot>/releases/latest/download/PubBornes.apk
+#   https://github.com/Robon33/Justinbornes/releases/latest/download/PubBornes.apk
 set -e
 cd "$(dirname "$0")"
 ./build-release.sh
